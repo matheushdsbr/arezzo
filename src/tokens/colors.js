@@ -1,9 +1,11 @@
-const white = '#FFFFFF';
-const dark = '#000000';
+const footer = {
+  dark: '#454545',
+  light: '#545454',
+  text: '#7B7877',
+};
 
 const colors = {
-  white,
-  dark,
+  footer,
 };
 
 export default colors;
