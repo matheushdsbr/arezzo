@@ -1,7 +1,7 @@
 const footer = {
   dark: '#454545',
   light: '#545454',
-  text: '#7B7877',
+  text: '#9E9E9C',
 };
 
 const colors = {
