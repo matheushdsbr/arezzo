@@ -1,15 +1,27 @@
 import styled from 'styled-components';
-import { colors } from '../../tokens';
+import { colors, media } from '../../tokens';
 
-export const Container = styled.footer``;
+export const Container = styled.footer`
+  ${media.lg} {
+    display: flex;
+  }
+`;
 
 export const ContainerContent = styled.div`
   background: ${colors.footer.dark};
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 25px 30px;
   text-align: center;
+  padding: 30px 20px;
+
+  ${media.lg} {
+    padding: 40px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    flex: 7;
+  }
 `;
 
 export const Content = styled.div`
@@ -19,7 +31,7 @@ export const Content = styled.div`
 
   h3 {
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
   }
@@ -46,7 +58,12 @@ export const ContainerMedias = styled.div`
   background: ${colors.footer.light};
   display: flex;
   flex-direction: column;
-  padding: 25px 30px;
+  padding: 30px 20px;
+
+  ${media.lg} {
+    padding: 40px 50px;
+    flex: 3;
+  }
 
   h2 {
     color: white;
