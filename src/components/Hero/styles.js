@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { media } from '../../tokens';
 import Banner1 from '../../assets/banner1.jpg';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  margin-top: 78px;
+`;
 
 export const BannerOne = styled.div`
   background-image: url(${Banner1});
