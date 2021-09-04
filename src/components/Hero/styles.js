@@ -4,6 +4,7 @@ import Banner1 from '../../assets/banner1.jpg';
 
 export const Container = styled.div`
   margin-top: 78px;
+  margin-bottom: 60px;
 `;
 
 export const BannerOne = styled.div`
