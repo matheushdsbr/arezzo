@@ -1,19 +1,12 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from 'react';
 import { Product, Container, PageNumbers } from './styles';
 import { products } from '../../api/products';
 
 const Products = () => {
-  // eslint-disable-next-line no-unused-vars
   const [currentPage, setCurrentPage] = useState(1);
-  // eslint-disable-next-line no-unused-vars
-  const [itemsPerPage, setItemsPerPage] = useState(20);
-  // eslint-disable-next-line no-unused-vars
-  const [pageNumberLimit, setPageNumberLimit] = useState(4);
-  // eslint-disable-next-line no-unused-vars
+  const [itemsPerPage] = useState(20);
+  const [pageNumberLimit] = useState(4);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(4);
-  // eslint-disable-next-line no-unused-vars
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
   const handleClick = (event) => {
@@ -51,8 +44,11 @@ const Products = () => {
     <>
       <PageNumbers>
         <ul>
-          <li onClick={handlePrevButton}>
-            <button type="button">Prev</button>
+          <li
+            onClick={handlePrevButton}
+            className={currentPage === pages[0] ? 'hide' : undefined}
+          >
+            <button type="button">&lt;</button>
           </li>
 
           {pages.map(
@@ -63,15 +59,20 @@ const Products = () => {
                   key={number}
                   id={number}
                   onClick={handleClick}
-                  className={currentPage === number ? 'active' : null}
+                  className={currentPage === number ? 'active' : undefined}
                 >
                   {number}
                 </li>
               ),
           )}
 
-          <li onClick={handleNextButton}>
-            <button type="button">Next</button>
+          <li
+            onClick={handleNextButton}
+            className={
+              currentPage === pages[pages.length - 1] ? 'hide' : undefined
+            }
+          >
+            <button type="button">&gt;</button>
           </li>
         </ul>
       </PageNumbers>

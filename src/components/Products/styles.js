@@ -81,5 +81,9 @@ export const PageNumbers = styled.div`
       background: #000;
       border: 2px solid #000;
     }
+
+    li.hide {
+      display: none;
+    }
   }
 `;
