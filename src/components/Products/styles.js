@@ -42,3 +42,44 @@ export const Product = styled.div`
     width: 200px;
   }
 `;
+
+export const PageNumbers = styled.div`
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    gap: 5px;
+
+    li {
+      color: #000;
+      background: #fff;
+      border: 2px solid #e9e9e9;
+      padding: 14px 16px;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background: #000;
+
+        button {
+          color: #fff;
+        }
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+
+    li.active {
+      color: #fff;
+      background: #000;
+      border: 2px solid #000;
+    }
+  }
+`;
