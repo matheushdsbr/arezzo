@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import News from './components/News';
+import Products from './components/Products';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Hero />
       <News />
+      <Products />
       <Footer />
     </>
   );
