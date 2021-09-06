@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Product,
   Content,
@@ -17,8 +17,14 @@ const Products = () => {
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const items = products.slice(indexOfFirstItem, indexOfLastItem);
-  const [currentItems, setCurrentItems] = useState(items);
+  const [currentItems, setCurrentItems] = useState(
+    products.slice(indexOfFirstItem, indexOfLastItem),
+  );
+
+  useEffect(() => {
+    setCurrentItems(products.slice(indexOfFirstItem, indexOfLastItem));
+    document.querySelector('select').value = 'default';
+  }, [indexOfFirstItem, indexOfLastItem]);
 
   const handleClick = (event) => {
     setCurrentPage(Number(event.target.id));
@@ -60,64 +66,58 @@ const Products = () => {
 
   const handleSortUpString = () => {
     setCurrentItems(
-      currentItems.sort((a, b) => {
+      [...currentItems].sort((a, b) => {
         if (a.name < b.name) return -1;
 
         return 1;
       }),
     );
-    console.log(currentItems);
   };
 
   const handleSortDownString = () => {
     setCurrentItems(
-      currentItems.sort((a, b) => {
+      [...currentItems].sort((a, b) => {
         if (a.name > b.name) return -1;
 
         return 1;
       }),
     );
-    console.log(currentItems);
   };
 
   const handleSortUpNumber = () => {
     setCurrentItems(
-      currentItems.sort((a, b) => {
+      [...currentItems].sort((a, b) => {
         if (a.price < b.price) return -1;
 
         return 1;
       }),
     );
-    console.log(currentItems);
   };
 
   const handleSortDownNumber = () => {
     setCurrentItems(
-      currentItems.sort((a, b) => {
+      [...currentItems].sort((a, b) => {
         if (a.price > b.price) return -1;
 
         return 1;
       }),
     );
-    console.log(currentItems);
   };
 
   const handleSelect = (event) => {
     const { value } = event.target;
 
-    if (value === 'UN') handleSortUpNumber();
     if (value === 'DN') handleSortDownNumber();
-    if (value === 'DS') handleSortDownString();
+    if (value === 'UN') handleSortUpNumber();
     if (value === 'US') handleSortUpString();
+    if (value === 'DS') handleSortDownString();
   };
 
   return (
     <Container>
-      {console.log(currentItems)}
-
       <SelectFilter>
         <select onChange={(e) => handleSelect(e)}>
-          <option defaultValue hidden>
+          <option defaultValue hidden value="default">
             Mais recentes
           </option>
           <option value="DN">Maior valor</option>
