@@ -6,15 +6,17 @@ export const Container = styled.section`
   flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 150px;
 
   ${media.lg} {
     padding: 0;
     margin: 0 auto;
+    margin-bottom: 150px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
 
   ${media.xl} {
@@ -24,6 +26,7 @@ export const Container = styled.section`
 
 export const Product = styled.div`
   text-align: center;
+  height: 280px;
 
   img {
     width: 100%;
@@ -46,6 +49,7 @@ export const Product = styled.div`
 export const PageNumbers = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 
   ul {
     display: flex;
