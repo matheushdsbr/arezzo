@@ -4,8 +4,9 @@ import { media } from '../../tokens';
 export const Container = styled.div`
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1120px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   text-align: center;
 
   ${media.lg} {

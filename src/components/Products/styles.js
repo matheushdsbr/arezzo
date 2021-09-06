@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { media } from '../../tokens';
 
-export const Container = styled.section`
+export const Content = styled.section`
   display: flex;
   flex-direction: column;
   padding-left: 15px;
@@ -18,15 +18,10 @@ export const Container = styled.section`
     align-items: center;
     gap: 30px;
   }
-
-  ${media.xl} {
-    width: 1200px;
-  }
 `;
 
 export const Product = styled.div`
   text-align: center;
-  height: 280px;
 
   img {
     width: 100%;
@@ -43,6 +38,7 @@ export const Product = styled.div`
 
   ${media.lg} {
     width: 200px;
+    height: 280px;
   }
 `;
 
@@ -89,5 +85,22 @@ export const PageNumbers = styled.div`
     li.hide {
       display: none;
     }
+  }
+`;
+
+export const Container = styled.div`
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+`;
+
+export const SelectFilter = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+
+  select {
+    padding: 10px 15px;
   }
 `;
