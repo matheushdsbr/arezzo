@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../tokens';
+import { fontSizes } from '../../tokens';
 
 export const Container = styled.div`
   padding-left: 15px;
@@ -9,18 +9,15 @@ export const Container = styled.div`
   margin-bottom: 30px;
   text-align: center;
 
-  ${media.lg} {
-  }
-
   h3 {
     text-transform: uppercase;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: ${fontSizes.large}px;
     font-weight: 400;
   }
 
   p {
     text-align: center;
-    font-size: 14px;
+    font-size: ${fontSizes.small}px;
   }
 `;

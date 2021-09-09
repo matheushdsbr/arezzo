@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../tokens';
+import { media, fontSizes } from '../../tokens';
 
 export const Container = styled.header`
   background: white;
@@ -85,7 +85,7 @@ export const NavMenu = styled.nav`
     li {
       a {
         color: black;
-        font-size: 14px;
+        font-size: ${fontSizes.small}px;
         text-decoration: none;
         text-transform: uppercase;
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, media } from '../../tokens';
+import { colors, media, fontSizes } from '../../tokens';
 
 export const Container = styled.footer`
   ${media.lg} {
@@ -30,8 +30,8 @@ export const Content = styled.div`
   gap: 14px;
 
   h3 {
-    color: #fff;
-    font-size: 14px;
+    color: white;
+    font-size: ${fontSizes.small}px;
     font-weight: 500;
     text-transform: uppercase;
   }
@@ -42,7 +42,7 @@ export const Content = styled.div`
 
       a {
         color: ${colors.footer.text};
-        font-size: 14px;
+        font-size: ${fontSizes.small}px;
         text-decoration: none;
 
         &:hover {
@@ -67,7 +67,7 @@ export const ContainerMedias = styled.div`
 
   h2 {
     color: white;
-    font-size: 40px;
+    font-size: ${fontSizes.xxxlarge}px;
     margin-bottom: 35px;
     text-transform: uppercase;
   }
@@ -80,7 +80,7 @@ export const SocialMedias = styled.div`
 
   p {
     color: white;
-    font-size: 14px;
+    font-size: ${fontSizes.small}px;
     font-weight: 500;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -94,7 +94,7 @@ export const SocialMedias = styled.div`
 
 export const SocialMedia = styled.div`
   align-items: center;
-  background: #323232;
+  background: ${colors.footer.socialmedia};
   display: flex;
   height: 30px;
   justify-content: center;
