@@ -1,3 +1,4 @@
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { Reset } from 'styled-reset';
 import { GlobalStyle } from './styles/global';
 import Footer from './components/Footer';
