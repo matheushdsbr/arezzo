@@ -1,5 +1,5 @@
 const fontFamilies = {
-  primary: 'Verdana, Geneva, Tahoma, sans-serif',
+  primary: "'Roboto', sans-seri",
   secondary: "'Source Sans Pro', sans-serif",
 };
 
