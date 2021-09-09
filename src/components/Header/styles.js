@@ -10,6 +10,7 @@ export const Container = styled.header`
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 2;
 
   ${media.lg} {
     align-items: center;
